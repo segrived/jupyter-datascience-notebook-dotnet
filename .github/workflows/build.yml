@@ -30,6 +30,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/segrived/jupyter-datascience-notebook-dotnet:latest
+        tags: ghcr.io/segrived/jupyter-datascience-notebook-dotnet:${GITHUB_SHA::7}
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}

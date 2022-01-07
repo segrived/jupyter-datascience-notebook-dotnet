@@ -1,9 +1,9 @@
 name: Build
 
-on:
-  push:
-    tags:
-       - 'v*'
+# on:
+#   push:
+#     tags:
+#        - 'v*'
 
 jobs:
   build:
@@ -30,6 +30,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/segrived/jupyter-datascience-notebook-dotnet:${{ steps.vars.outputs.tag }}
+        tags: ghcr.io/segrived/jupyter-datascience-notebook-dotnet:latest
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}

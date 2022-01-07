@@ -13,7 +13,6 @@ ENV DOTNET_INTERACTIVE_CLI_TELEMETRY_OPTOUT=1
 
 ENV PATH="${PATH}:/${HOME}/.dotnet/tools"
 RUN dotnet tool install -g Microsoft.dotnet-interactive
-RUN ls /${HOME}/.dotnet/tools
 RUN dotnet interactive jupyter install
 
 RUN fix-permissions "${CONDA_DIR}" && fix-permissions "/home/${NB_USER}"

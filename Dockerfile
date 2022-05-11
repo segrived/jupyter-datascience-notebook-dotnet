@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:hub-2.0.1
+FROM jupyter/datascience-notebook:hub-2.3.0
 
 USER root
 
